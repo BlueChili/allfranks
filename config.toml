@@ -1,0 +1,8 @@
+languageCode = "en-us"
+title = "All Franks NY Technician"
+baseURL = "http://allfranksnytechnician.com/"
+
+publishDir = "public"
+
+[blackfriday]
+  hrefTargetBlank = true
