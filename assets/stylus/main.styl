@@ -30,3 +30,54 @@ red_secondary = #A4021E
 // @import 'hp-navigation'
 // @import 'results'
 // @import 'media'
+body
+  color #444
+  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+
+.nv
+  display flex
+  justify-content space-between
+  border-bottom 1px solid #666
+  @media all and (min-width: 500px)
+    justify-content flex-start
+  @supports (backdrop-filter: blur(3px))
+    box-shadow 0 0 4px 1px rgb(22, 79, 139)
+    backdrop-filter grayscale(20%) blur(3px)
+    position sticky
+    top 0
+
+.nv-item
+  font-weight 600
+  color #333
+  text-decoration none
+  padding 1em 0.5em
+  @media all and (min-width: 500px)
+    padding 1em
+
+.in //Intro component
+  background url('/img/hero.jpg') center top
+  filter grayscale(50%)
+  padding 1em 0
+  height 100vw
+  display flex
+  flex-direction column
+  justify-content center
+
+.in-title
+  font-size 2em
+  margin 0 auto 0
+  padding 0.5em 0.2em
+  text-align center
+  background rgba(255, 255, 255, 0.5)
+  border 1px solid rgb(247, 244, 11)
+  width 90%
+  @supports (backdrop-filter: blur(3px))
+    background rgba(255, 255, 255, 0.3)
+    backdrop-filter blur(2px)
+  img
+    object-fit contain
+    width 90%
+
+.in-moto
+  padding 1em 3em
+  font-size 0.9em
