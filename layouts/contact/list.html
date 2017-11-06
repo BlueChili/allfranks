@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <form class="cf" action="//formspree.io/allnytechnician@gmail.com" method="POST">
+        <label for="name">Name</label>
+        <input class="cf-textbox" id="name" type="text" name="name">
+        <label for="_subject">Subject</label>
+        <input class="cf-textbox" id="_subject" type="text" name="_subject">
+        <label for="_replyto">Email</label>
+        <input class="cf-textbox" id="_replyto" type="text" name="_replyto">
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+{{ end }}

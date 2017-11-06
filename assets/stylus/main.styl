@@ -113,10 +113,32 @@ body
 
 img[src='/img/boiler-room.jpg']
   width 100%
+  opacity 0
   transform translateX(-100%)
   transform-origin left
-  animation grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.6s forwards
+  animation grow-left ease-out 0.8s forwards
   animation-delay 0.6s
+
+.mp
+  max-width 900px
+  margin 0 auto
+
+.cf
+  width 100%
+  max-width 900px
+  margin 0 auto
+  display flex
+  flex-direction column
+
+.cf-textbox
+  box-sizing border-box
+  margin-top 0.2em
+  margin-bottom 1em
+  margin-left 1em
+  
+.cf
+  label
+    margin-bottom 0.5em
 
 @keyframes fade-in-top
   from
@@ -136,7 +158,9 @@ img[src='/img/boiler-room.jpg']
 
 @keyframes grow-left
   from
-    transform translateX(-100%)
+    opacity 0
+    transform translateX(-20%)
   to
+    opacity 1
     transform translateX(0)
 
