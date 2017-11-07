@@ -40,11 +40,12 @@ body
 .nv
   display flex
   justify-content space-between
-  border-bottom 1px solid #666
+  border-bottom 1px solid blue_secondary
   @media all and (min-width: 500px)
     justify-content flex-start
   @supports (backdrop-filter: blur(3px))
-    box-shadow 0 0 4px 1px rgb(22, 79, 139)
+    // box-shadow 0 0 4px 1px rgb(22, 79, 139)
+    box-shadow 0 0 4px 1px blue_secondary
     backdrop-filter grayscale(20%) blur(3px)
     background rgba(255,255,255,0.4)
     position sticky
@@ -149,6 +150,11 @@ a[href="#map"], a[href="#ci"]
   background blue_secondary
   padding 1em
   display flex
+
+.ci-details__copy
+  font-size 1.2em
+  font-weight 400
+  text-align center
 
 .ci-details
   flex-grow 1
