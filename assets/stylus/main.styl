@@ -7,12 +7,13 @@
 green_primary = #a3c81c
 green_secondary = #668200
 blue_primary = rgb(22, 79, 139)
-blue_secondary = #0c4c6c
+blue_secondary = rgb(1, 110, 220)
 purple_primary = #631a8b
 purple_secondary = #3c045b
 red_primary = #D40221
 red_secondary = #A4021E
 yellow = rgb(247, 244, 11)
+contact_column_layout = 724px
 
 
 /*-------------------------
@@ -119,26 +120,88 @@ img[src='/img/boiler-room.jpg']
   animation grow-left ease-out 0.8s forwards
   animation-delay 0.6s
 
-.mp
-  max-width 900px
+.contact-container
+  border 1px solid blue_secondary
+  border-radius 2px
+  display flex
+  max-width 1400px
   margin 0 auto
+  flex-direction column
+  @media all and (min-width: contact_column_layout)
+    flex-direction row
+
+// .mp
+//   margin 0 auto
+a[href="#map"], a[href="#ci"]
+  margin 0 auto
+  text-decoration none
+  font-weight 500
+  padding 1em
+  color blue_secondary
+  margin-top 0.5em
+  @media all and (min-width: contact_column_layout)
+    display none
+    opacity 0
+    width 0
+    visibility hidden
+.ci
+  flex-direction column
+  background blue_secondary
+  padding 1em
+  display flex
+
+.ci-details
+  flex-grow 1
+  flex-basis 50%
+  color white
+  margin-bottom 1em
+
+.ci-details__address
+  font-size 1em
+  line-height 1.5em 
+  margin-bottom 0.3em
+
+.ci-details__phones
+  display flex
+  justify-content space-around
+  margin-bottom 0.8em
+  a
+    color #fff
+
+.ci-details__mailLink
+  display block
+  color #fff
+  text-align center
 
 .cf
-  width 100%
-  max-width 900px
-  margin 0 auto
   display flex
   flex-direction column
+  justify-content center
+  label
+    margin-bottom 0.5em
+    font-weight 400
+    color white
+    margin-left 1em
+  input[type='submit']
+    border 0px
+    width 5em
+    margin-left auto
+    padding 0.3em
+    background white
+    font-size 1em
+    color blue_secondary
+  textarea
+    margin-bottom 1em
+    font-size 1em
+    height 3em
 
 .cf-textbox
   box-sizing border-box
   margin-top 0.2em
-  margin-bottom 1em
-  margin-left 1em
+  margin-bottom 1.3em
+  padding 0.3em 0.5em
+  font-size 1em
   
-.cf
-  label
-    margin-bottom 0.5em
 
 @keyframes fade-in-top
   from
