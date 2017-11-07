@@ -125,14 +125,25 @@ img[src='/img/boiler-room.jpg']
   border 1px solid blue_secondary
   border-radius 2px
   display flex
-  max-width 1400px
+  max-width 1440px
   margin 0 auto
   flex-direction column
   @media all and (min-width: contact_column_layout)
     flex-direction row
+    height calc(100vh -43px)
+    align-content space-around
 
 // .mp
 //   margin 0 auto
+@media all and (min-width: contact_column_layout)
+  .mp
+    width 50%
+.map
+  width 100%
+  height 500px
+  @media all and (min-width: contact_column_layout)
+    height 100%
+
 a[href="#map"], a[href="#ci"]
   margin 0 auto
   text-decoration none
@@ -150,17 +161,24 @@ a[href="#map"], a[href="#ci"]
   background blue_secondary
   padding 1em
   display flex
+  @media all and (min-width: contact_column_layout)
+    flex-direction row
+    width 50%
+
+.ci-details
+  color white
+  margin-bottom 1em
+  @media all and (min-width: contact_column_layout)
+    width 20em
+    display flex
+    justify-content center
+    flex-direction column
 
 .ci-details__copy
   font-size 1.2em
   font-weight 400
   text-align center
-
-.ci-details
-  flex-grow 1
-  flex-basis 50%
-  color white
-  margin-bottom 1em
+  margin-bottom 0.6em
 
 .ci-details__address
   font-size 1em
@@ -183,6 +201,9 @@ a[href="#map"], a[href="#ci"]
   display flex
   flex-direction column
   justify-content center
+  @media all and (min-width: contact_column_layout)
+    flex-grow 1
+    padding 5em 2em
   label
     margin-bottom 0.5em
     font-weight 400
