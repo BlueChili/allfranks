@@ -53,7 +53,7 @@ gulp.task('stylus', function() {
 //the default "compile" task for sass and js
 // gulp.task('compile', ['stylus', 'scripts'], function() {
 gulp.task('compile', ['stylus'], function() {
-  gulp.watch('assets/stylus/*.styl', ['stylus']);
+  gulp.watch('assets/stylus/**/*.styl', ['stylus']);
   // gulp.watch("scss/partials#<{(|.scss", ['sass']);
   // gulp.watch("js/modules#<{(|.js", ['scripts']);
   // gulp.watch("../content/**/*.md", ['markdown']);
