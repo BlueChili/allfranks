@@ -3,64 +3,12 @@
 
 
 // Color definitions
-
-green_primary = #a3c81c
-green_secondary = #668200
 blue_primary = rgb(22, 79, 139)
 blue_secondary = rgb(1, 110, 220)
-purple_primary = #631a8b
-purple_secondary = #3c045b
-red_primary = #D40221
-red_secondary = #A4021E
 yellow = rgb(247, 244, 11)
+
+// Viewport definitions
 contact_desktop = 724px
-
-
-/*-------------------------
- Home page styles:
- - Left navigation bar
- - Central fixed section
- - Right column news feed
---------------------------*/
-
-// partials importing
-
-// @import 'partials/navbar'
-// @import 'partials/media-queries'
-// @import 'partials/article'
-// @import 'partials/news'
-// @import 'homepage'
-// @import 'hp-navigation'
-// @import 'results'
-// @import 'media'
-body
-  color #333
-  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
-
-.nv
-  display flex
-  justify-content space-between
-  border-bottom 1px solid blue_secondary
-  @media all and (min-width: 500px)
-    justify-content flex-start
-  @supports (backdrop-filter: blur(3px))
-    // box-shadow 0 0 4px 1px rgb(22, 79, 139)
-    box-shadow 0 0 4px 1px blue_secondary
-    backdrop-filter grayscale(20%) blur(3px)
-    background rgba(255,255,255,0.4)
-    position sticky
-    top 0
-    z-index 1
-
-.nv-item
-  font-weight 600
-  color #333
-  text-decoration none
-  padding 1em 0.5em
-  opacity 0
-  animation fade-in-top ease 0.4s forwards
-  @media all and (min-width: 500px)
-    padding 1em
 
 .in //Intro component
   background url('/img/hero.jpg') center top
@@ -121,8 +69,6 @@ img[src='/img/boiler-room.jpg']
   animation fade-in-left ease-out 0.8s forwards
   animation-delay 0.6s
 
-@import 'partials/contact'
-
 @keyframes fade-in-top
   from
     opacity 0
@@ -146,4 +92,7 @@ img[src='/img/boiler-room.jpg']
   to
     opacity 1
     transform translateX(0)
+
+@import 'partials/navigation'
+@import 'partials/contact'
 
