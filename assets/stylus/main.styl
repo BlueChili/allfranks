@@ -13,7 +13,7 @@ purple_secondary = #3c045b
 red_primary = #D40221
 red_secondary = #A4021E
 yellow = rgb(247, 244, 11)
-contact_column_layout = 724px
+contact_desktop = 724px
 
 
 /*-------------------------
@@ -116,9 +116,9 @@ body
 img[src='/img/boiler-room.jpg']
   width 100%
   opacity 0
-  transform translateX(-100%)
+  transform translateX(-50px)
   transform-origin left
-  animation grow-left ease-out 0.8s forwards
+  animation fade-in-left ease-out 0.8s forwards
   animation-delay 0.6s
 
 @import 'partials/contact'
@@ -139,10 +139,10 @@ img[src='/img/boiler-room.jpg']
     opacity 1
     transform translateY(0)
 
-@keyframes grow-left
+@keyframes fade-in-left
   from
     opacity 0
-    transform translateX(-20%)
+    transform translateX(-50px)
   to
     opacity 1
     transform translateX(0)
