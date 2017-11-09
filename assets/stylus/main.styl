@@ -5,22 +5,38 @@
 // Color definitions
 blue_primary = rgb(22, 79, 139)
 blue_secondary = rgb(1, 110, 220)
+red_primary = #f40000
 yellow = rgb(247, 244, 11)
 
 // Viewport definitions
 contact_desktop = 724px
+ipad_portrait = 767px
+ipad_landscape = 1023px
+ipad_pro_10 = 1111px
+ipad_pro_12 = 1365px
+macbook = 1439px
+fullHD = 1919px
 
 .in //Intro component
+  box-sizing border-box
   background url('/img/hero.jpg') center top
-  filter grayscale(50%)
   padding 1em 0
-  height 100vw
+  height 110vw
   display flex
   flex-direction column
   justify-content center
   opacity 0
   animation fade-in-bottom ease 0.4s forwards
   animation-delay 0.4s
+  @media all and (min-width: contact_desktop)
+    background none
+    height 50vh
+    width 100vw
+    margin 0 auto
+    flex-direction row
+    padding 0
+    align-content center
+    flex-basis 50vw
 
 .in-title
   font-size 2em
@@ -31,11 +47,19 @@ contact_desktop = 724px
   border 1px solid blue_primary
   width 90%
   @supports (backdrop-filter: blur(3px))
-    background rgba(255, 255, 255, 0.3)
-    backdrop-filter blur(2px)
+    background rgba(255, 255, 255, 0.2)
+    backdrop-filter blur(5px)
   img
     object-fit contain
     width 100%
+  @media all and (min-width: contact_desktop)
+    margin 0
+    background-repeat no-repeat
+    background url('/img/hero.jpg')
+    background-size cover
+    box-sizing border-box
+    width 50%
+    backdrop-filter saturate(10%)
 
 .in-moto
   padding 1em 1em
@@ -48,18 +72,134 @@ contact_desktop = 724px
   @supports (backdrop-filter: blur(3px))
     background rgba(255, 255, 255, 0.7)
     backdrop-filter blur(2px)
+  @media all and (min-width: contact_desktop)
+    display none
+    opacity 0
+    visibility hidden
+
+.in-moto__desktop
+  display none
+  opacity 0
+  visibility hidden
+  @media all and (min-width: ipad_portrait)
+    display block
+    opacity 1
+    visibility visible
+    margin 0
+    width 50%
+    box-sizing border-box
+    background-color red_primary
+    h1, p
+      color white
+    h1
+      font-size 4em
+      font-weight 700
+      margin-top -15px
+      margin-left -5px
+      &::first-letter
+        font-size 1.5em
+    p
+      font-size 2em
+      margin-top calc(22.5vh - 6em)
+      text-align right
+      max-width 20em
+      margin-left auto
+  @media all and (min-width: ipad_landscape)
+    h1
+      margin-top -16px
+      margin-left -5px
+    p
+      font-size 1.7em
+      max-width 13em
+      margin-top calc(22.5vh - 5.5em)
+  @media all and (min-width: ipad_pro_10)
+    p
+      margin-top calc(22.5vh - 6.5em)
+  @media all and (min-width: ipad_pro_12)
+    h1
+      font-size 5.0em
+      margin-top -20px
+      margin-left -7px
+    p
+      max-width 15em
+  @media all and (min-width: macbook)
+    p
+      font-size 1.8em
+      margin-top calc(22.5vh - 7em)
+      max-width 15em
+  @media all and (min-width: fullHD)
+    h1
+      font-size 6em
+    p
+      font-size 2em
+
+.in-moto__callout
+  @media all and (min-width: contact_desktop)
+    margin-left -0.5em
+    font-size 2.3em
+    font-weight 600
+
+.ir
+  @media all and (min-width: ipad_portrait)
+    display flex
+    margin-top 1em
+    flex-wrap wrap
+
+.ir-copy
+  box-sizing border-box
+  color white
+  margin 0
+  background-color blue_secondary
+  p
+    font-size 1em
+  @media all and (min-width: ipad_portrait)
+    display flex
+    align-content space-between
+    justify-content flex-end
+    flex-basis 40%
+    flex-grow 1
+    flex-direction column
+    p
+      flex-basis 3em
+      flex-grow 1
 
 .cd
-  width 80%
-  padding 0.5em 
-  margin 1em auto 1em
-  border 1px solid blue_primary
+  padding 1em
+  margin 0
   opacity 0
   animation fade-in-bottom ease 0.6s forwards
   animation-delay 0.6s
-  p
-    margin 0
-    padding 0 0 0.4em
+  background red_primary
+  @media all and (min-width: ipad_portrait)
+    display flex
+    flex-direction column
+    justify-content center
+
+.cd-address
+  font-size 1em
+  margin 0 0 1em
+  padding 0
+  line-height 1.5em
+  color white
+
+.cd-address__firstLine
+  font-size 1.7em
+
+.cd-phones
+  display block
+  margin-bottom 0.8em
+  color blue_secondary
+  text-decoration none
+  text-align center
+  color white
+
+.cd-mail
+  display block
+  font-size 1.1em
+  color blue_secondary
+  margin-bottom 0.7em
+  text-align center
+  color white
 
 img[src='/img/boiler-room.jpg']
   width 100%
@@ -68,6 +208,13 @@ img[src='/img/boiler-room.jpg']
   transform-origin left
   animation fade-in-left ease-out 0.8s forwards
   animation-delay 0.6s
+  margin 0
+  padding 0
+  box-sizing border-box
+  @media all and (min-width: ipad_portrait)
+    flex-grow 1
+    flex-basis 30%
+    object-fit cover
 
 @keyframes fade-in-top
   from
