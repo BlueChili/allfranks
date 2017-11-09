@@ -19,7 +19,7 @@ fullHD = 1919px
 
 .in //Intro component
   box-sizing border-box
-  background url('/img/hero.jpg') center top
+  background url('/img/hero-mono.png') center top
   padding 1em 0
   height 110vw
   display flex
@@ -55,11 +55,15 @@ fullHD = 1919px
   @media all and (min-width: contact_desktop)
     margin 0
     background-repeat no-repeat
-    background url('/img/hero.jpg')
+    background url('/img/hero-mono.png')
     background-size cover
     box-sizing border-box
     width 50%
     backdrop-filter saturate(10%)
+    display flex
+    justify-content center
+    img
+      max-width 300px
 
 .in-moto
   padding 1em 1em
@@ -142,7 +146,6 @@ fullHD = 1919px
 .ir
   @media all and (min-width: ipad_portrait)
     display flex
-    margin-top 1em
     flex-wrap wrap
 
 .ir-copy
@@ -150,18 +153,26 @@ fullHD = 1919px
   color white
   margin 0
   background-color blue_secondary
+  padding 1em
   p
     font-size 1em
   @media all and (min-width: ipad_portrait)
     display flex
-    align-content space-between
-    justify-content flex-end
+    justify-content space-between
     flex-basis 40%
     flex-grow 1
     flex-direction column
     p
-      flex-basis 3em
-      flex-grow 1
+      font-size 1.4em
+      max-width 20em
+    p:first-child
+      margin-right 20%
+      margin-left 5%
+      margin-bottom 5%
+    p:last-child
+      margin-left auto
+      margin-right 3%
+      text-align right
 
 .cd
   padding 1em
@@ -181,9 +192,13 @@ fullHD = 1919px
   padding 0
   line-height 1.5em
   color white
+  font-weight 700
+  abbr
+    font-weight 700
 
 .cd-address__firstLine
   font-size 1.7em
+  font-weight 700
 
 .cd-phones
   display block
@@ -192,6 +207,7 @@ fullHD = 1919px
   text-decoration none
   text-align center
   color white
+  font-weight 700
 
 .cd-mail
   display block
@@ -200,6 +216,7 @@ fullHD = 1919px
   margin-bottom 0.7em
   text-align center
   color white
+  font-weight 700
 
 img[src='/img/boiler-room.jpg']
   width 100%
