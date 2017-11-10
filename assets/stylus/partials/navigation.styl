@@ -1,12 +1,20 @@
 .nv
   display flex
   justify-content space-between
-  border-bottom 1px solid blue_secondary
+  // border-bottom 1px solid blue_secondary
+  box-sizing border-box
   @media all and (min-width: 500px)
     justify-content flex-start
+    position relative
+    &::after
+      content ''
+      height 1px
+      width 100%
+      background linear-gradient(to right, blue_secondary, blue_secondary 40%, transparent 50%)
+      position absolute
+      bottom 0
+      left 0
   @supports (backdrop-filter: blur(3px))
-    // box-shadow 0 0 4px 1px rgb(22, 79, 139)
-    box-shadow 0 0 4px 1px blue_secondary
     backdrop-filter grayscale(20%) blur(3px)
     background rgba(255,255,255,0.4)
     position sticky

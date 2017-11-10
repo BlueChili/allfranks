@@ -44,7 +44,7 @@ fullHD = 1919px
   padding 0.5em 0.2em
   text-align center
   background rgba(255, 255, 255, 0.5)
-  border 1px solid blue_primary
+  // border 1px solid blue_primary
   width 90%
   @supports (backdrop-filter: blur(3px))
     background rgba(255, 255, 255, 0.2)
@@ -182,6 +182,7 @@ fullHD = 1919px
   animation-delay 0.6s
   background red_primary
   @media all and (min-width: ipad_portrait)
+    padding 1em 3em
     display flex
     flex-direction column
     justify-content center
@@ -260,3 +261,13 @@ img[src='/img/boiler-room.jpg']
 @import 'partials/navigation'
 @import 'partials/contact'
 
+.gl-wrapper
+  width 100vw
+  margin 0
+  padding 0
+  background linear-gradient(to bottom left, blue_secondary, blue_secondary 30.9%, red_primary 31%)
+  display flex
+  justify-content center
+  img
+    margin 1em auto
+    border 10px solid white
