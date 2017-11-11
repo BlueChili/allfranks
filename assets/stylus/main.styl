@@ -28,6 +28,7 @@ fullHD = 1919px
   opacity 0
   animation fade-in-bottom ease 0.4s forwards
   animation-delay 0.4s
+  position relative
   @media all and (min-width: contact_desktop)
     background none
     height 50vh
@@ -89,6 +90,7 @@ fullHD = 1919px
     display block
     opacity 1
     visibility visible
+    z-index 1
     margin 0
     width 50%
     box-sizing border-box
@@ -186,6 +188,21 @@ fullHD = 1919px
     display flex
     flex-direction column
     justify-content center
+    position relative
+    &:hover .cd-contactLink
+      visibility visible
+      animation fade-in-bottom ease 0.4s forwards
+
+.cd-contactLink
+  color white
+  font-size 2em
+  opacity 0
+  position absolute
+  bottom 0.5em
+  right 0.5em
+  visibility hidden
+  text-decoration none
+  background transparent
 
 .cd-address
   font-size 1em
