@@ -22,8 +22,9 @@
     z-index 1
 
 .nv-item
+  position relative
   font-weight 600
-  color #333
+  color red_primary
   text-decoration none
   padding 1em 0.5em
   opacity 0
@@ -31,3 +32,16 @@
   @media all and (min-width: 500px)
     padding 1em
 
+:not(.nv-selected) .nv-item
+  &:hover
+    color blue
+
+.nv-selected
+  &::after
+    position absolute
+    content ''
+    height 2px
+    width 2em
+    background red_primary
+    left 1em
+    bottom 10px

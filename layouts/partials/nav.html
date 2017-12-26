@@ -1,5 +1,6 @@
 <nav class="nv">
-    <a href="/" class="nv-item">Home</a>
-    <a href="/contact" class="nv-item">Contact Us</a>
+    <a href="/" class="nv-item {{ if .IsHome }}nv-selected{{ end }}">Home</a>
+    <a href="/services" class="nv-item {{ if eq .Section "services"}}nv-selected{{ end }}">Services</a>
+    <a href="/contact" class="nv-item {{ if eq .Section "contact"}}nv-selected{{ end }}">Contact Us</a>
     <!-- <a href="/location" class="nv&#45;item">Find Us</a> -->
 </nav>

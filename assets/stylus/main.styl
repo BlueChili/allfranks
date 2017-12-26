@@ -17,239 +17,336 @@ ipad_pro_12 = 1365px
 macbook = 1439px
 fullHD = 1919px
 
-.in //Intro component
+.hr
+  width 100vw
+  background url('/img/chalet.jpg') center center
+  background-size cover
+  display flex
+  justify-content center
+  padding 12em 0
+
+.hr-body
+  background rgba(255, 255, 255, 0.6)
+  max-width 20em
+  padding 6em 2em
+  p
+    color #222
+    font-size 1.4em
+    font-weight 400
+    text-align center
+    text-transform uppercase
+
+.hr-logo
+  flex-shrink 1
+  max-width 428px
+  margin-right 4em
+  object-fit contain
+
+.advantage
+  padding 4em 0
+
+.advantage-title
+  color red_primary
+  background white
+  width 100%
+  text-align center
+  font-weight 700
+  text-transform uppercase
+  margin-bottom 1em
+  font-size 3.8em
+
+.advantage-banners
+  display flex
+  align-items flex-start
+  max-width 960px
+  margin 0 auto
+
+.advantage-banner, .advantage-banner__main
+  background red_primary
+  padding 2em 1px 40px
+  margin 0 2em
+
+.advantage-banner
+  width 14em
+  flex-grow 0
+  position relative
   box-sizing border-box
-  background url('/img/hero-mono.png') center top
-  padding 1em 0
-  height 110vw
+  &::before
+    content ''
+    height 0px
+    width 0px
+    position absolute
+    bottom 0
+    left 0
+    border-right 7em solid transparent
+    border-bottom 28px solid white
+  &::after
+    content ''
+    height 0px
+    width 0px
+    position absolute
+    bottom 0
+    right 0
+    border-left 7em solid transparent
+    border-bottom 28px solid white
+  .advantage-bannerText 
+    height 100px
+    font-size 2em
+
+.advantage-banner__main
+  width 25em
+  padding-bottom 60px
+  position relative
+  &::before
+    content ''
+    height 0px
+    width 0px
+    position absolute
+    bottom 0
+    left 0
+    border-right 12.5em solid transparent
+    border-bottom 40px solid white
+  &::after
+    content ''
+    height 0px
+    width 0px
+    position absolute
+    bottom 0
+    right 0
+    border-left 12.5em solid transparent
+    border-bottom 40px solid white
+
+.advantage-banner__main
+  .advantage-bannerText
+    font-size 2.8em
+
+.advantage-bannerText
+  color red_primary
+  background white
+  font-size 2em
+  text-transform uppercase
+  text-align center
+  line-height 1.2em
+  padding-left 0.7em
+  padding-right 0.7em
+
+.hpsv
+  padding 7em 0 3em
+  background red_primary
+  color white
+  
+.hpsv-title
+  width 100%
+  text-align center
+  font-weight 600
+  margin-bottom 0.8em
+
+.hpsc // home page service component
+  max-width 960px
+  margin 0 auto 4em
+  display flex
+
+.hpsc-image
+  flex-basis 50%
+  flex-shrink 1
+  margin 0
+  padding 0 0 0 4em
+  img
+    width 100%
+    height auto
+
+.hpsc-copy
+  flex-basis 50%
+  flex-shrink 0
+  h2
+    font-size 1.5em
+    font-weight 500
+    padding 0
+    margin 0 0 1em 0
+  p
+    padding 0
+    margin 0 0 1em 0
+    font-size 1.1em
+  
+.hpmt
   display flex
   flex-direction column
-  justify-content center
-  opacity 0
-  animation fade-in-bottom ease 0.4s forwards
-  animation-delay 0.4s
-  position relative
-  @media all and (min-width: contact_desktop)
-    background none
-    height 50vh
-    width 100vw
-    margin 0 auto
-    flex-direction row
-    padding 0
-    align-content center
-    flex-basis 50vw
-
-.in-title
-  font-size 2em
-  margin 0 auto 0
-  padding 0.5em 0.2em
-  text-align center
-  background rgba(255, 255, 255, 0.5)
-  // border 1px solid blue_primary
-  width 90%
-  @supports (backdrop-filter: blur(3px))
-    background rgba(255, 255, 255, 0.2)
-    backdrop-filter blur(5px)
-  img
-    object-fit contain
-    width 100%
-  @media all and (min-width: contact_desktop)
-    margin 0
-    background-repeat no-repeat
-    background url('/img/hero-mono.png')
-    background-size cover
-    box-sizing border-box
-    width 50%
-    backdrop-filter saturate(10%)
-    display flex
-    justify-content center
-    img
-      max-width 300px
-
-.in-moto
-  padding 1em 1em
-  font-size 1.1em
-  font-weight 400
-  background rgba(255, 255, 255, 0.7)
-  max-width 80%
-  width 80%
-  margin 20px auto 0
-  @supports (backdrop-filter: blur(3px))
-    background rgba(255, 255, 255, 0.7)
-    backdrop-filter blur(2px)
-  @media all and (min-width: contact_desktop)
-    display none
-    opacity 0
-    visibility hidden
-
-.in-moto__desktop
-  display none
-  opacity 0
-  visibility hidden
-  @media all and (min-width: ipad_portrait)
-    display block
-    opacity 1
-    visibility visible
-    z-index 1
-    margin 0
-    width 50%
-    box-sizing border-box
-    background-color red_primary
-    h1, p
-      color white
-    h1
-      font-size 4em
-      font-weight 700
-      margin-top -15px
-      margin-left -5px
-      &::first-letter
-        font-size 1.5em
-    p
-      font-size 2em
-      margin-top calc(22.5vh - 6em)
-      text-align right
-      max-width 20em
-      margin-left auto
-  @media all and (min-width: ipad_landscape)
-    h1
-      margin-top -16px
-      margin-left -5px
-    p
-      font-size 1.7em
-      max-width 13em
-      margin-top calc(22.5vh - 5.5em)
-  @media all and (min-width: ipad_pro_10)
-    p
-      margin-top calc(22.5vh - 6.5em)
-  @media all and (min-width: ipad_pro_12)
-    h1
-      font-size 5.0em
-      margin-top -20px
-      margin-left -7px
-    p
-      max-width 15em
-  @media all and (min-width: macbook)
-    p
-      font-size 1.8em
-      margin-top calc(22.5vh - 7em)
-      max-width 15em
-  @media all and (min-width: fullHD)
-    h1
-      font-size 6em
-    p
-      font-size 2em
-
-.in-moto__callout
-  @media all and (min-width: contact_desktop)
-    margin-left -0.5em
-    font-size 2.3em
-    font-weight 600
-
-.ir
-  @media all and (min-width: ipad_portrait)
-    display flex
-    flex-wrap wrap
-
-.ir-copy
-  box-sizing border-box
-  color white
-  margin 0
-  background-color blue_secondary
-  padding 1em
+  align-content center
+  max-width 960px
+  margin 0 auto
+  padding 4em 0
   p
-    font-size 1em
-  @media all and (min-width: ipad_portrait)
-    display flex
-    justify-content space-between
-    flex-basis 40%
-    flex-grow 1
-    flex-direction column
-    p
-      font-size 1.4em
-      max-width 20em
-    p:first-child
-      margin-right 20%
-      margin-left 5%
-      margin-bottom 5%
-    p:last-child
-      margin-left auto
-      margin-right 3%
-      text-align right
-
-.cd
+    font-size 3.4em
+    font-weight 700
+    text-transform uppercase
+    line-height 1.3em
+    text-align center
+    margin 0 0 0.3em
+  img
+    width 400px
+    height auto
+    margin 0 auto 1em
+.ct
+  background blue_secondary
   padding 1em
-  margin 0
-  opacity 0
-  animation fade-in-bottom ease 0.6s forwards
-  animation-delay 0.6s
-  background red_primary
+  font-size 28px
   @media all and (min-width: ipad_portrait)
-    padding 1em 3em
-    display flex
-    flex-direction column
-    justify-content center
+    padding 3em 0
     position relative
-    &:hover .cd-contactLink
+    &:hover .ct-contactLink
       visibility visible
       animation fade-in-bottom ease 0.4s forwards
 
-.cd-contactLink
+.ct-title, .ct-address, .cd-address__firstLine, .ct-phones, .ct-phone, .ct-mail, .ct-contactLink, .ct-mailTitle, .ct-copy
+  font-size 1em
   color white
-  font-size 2em
+  text-align center
+  font-weight 200
+
+.ct-title
+  margin-bottom 1em
+
+.ct-copy
+  font-size 0.8em
+  margin-bottom 1em
+  padding 0
+  font-weight 300
+
+.ct-contactLink
   opacity 0
   position absolute
   bottom 0.5em
-  right 0.5em
+  right calc(50% - 0.5em)
   visibility hidden
   text-decoration none
   background transparent
 
-.cd-address
-  font-size 1em
+.ct-address
   margin 0 0 1em
   padding 0
-  line-height 1.5em
+  line-height 1.2em
   color white
-  font-weight 700
+  font-size 0.8em
   abbr
-    font-weight 700
+    font-size 1em
+    font-weight 200
 
-.cd-address__firstLine
-  font-size 1.7em
-  font-weight 700
-
-.cd-phones
+.ct-phone
   display block
-  margin-bottom 0.8em
-  color blue_secondary
   text-decoration none
   text-align center
   color white
-  font-weight 700
+  line-height 1.2em
+  font-weight 300
 
-.cd-mail
+.ct-phones
+  margin-bottom 2em
+
+.ct-mail
   display block
-  font-size 1.1em
-  color blue_secondary
   margin-bottom 0.7em
   text-align center
-  color white
-  font-weight 700
+  text-decoration none
+  margin-bottom 1.5em
+  line-height 1.5em
 
-img[src='/img/boiler-room.jpg']
-  width 100%
-  opacity 0
-  transform translateX(-50px)
-  transform-origin left
-  animation fade-in-left ease-out 0.8s forwards
-  animation-delay 0.6s
-  margin 0
+.ft         // Footer
+  background red_primary
+  color white
+  display flex
+  flex-direction column
+  padding 1em 0
+  font-size 16px
+
+.ft-title
+  font-size 1em
+  font-weight 200
+  text-align center
+  margin-bottom 8px
+
+.ft-contacts
   padding 0
-  box-sizing border-box
-  @media all and (min-width: ipad_portrait)
-    flex-grow 1
-    flex-basis 30%
-    object-fit cover
+  text-align center
+  font-size 16px
+  .ft-phone, .ft-mail
+    color white
+    text-decoration none
+    font-size 1em
+    font-weight 200
+
+.ft-address
+  font-size 1em
+  font-weight 200
+  text-align center
+
+.sv-service
+  padding 3em 0
+.sv-header
+  padding 2.5em 0
+  display flex
+  margin 0 auto
+  align-items center
+  justify-content center
+  border-bottom 1px solid red_primary
+
+.sv-headerLogo
+  width 280px
+  height auto
+  object-fit contain
+  padding-right 3em
+
+.sv-headerTitle
+  text-transform uppercase
+  font-weight 700
+  color blue_secondary
+
+.sv-redBorder
+  border-bottom 1px solid red_primary
+
+.sv-blueBorder
+  border-bottom 1px solid blue_secondary
+
+.sv-serviceContent
+  max-width 960px
+  margin 0 auto
+  display flex
+
+.sv-serviceCopy
+  flex-basis 50%
+  flex-grow 1
+  h1
+    font-size 2em
+    font-weight 500
+    padding-bottom 0.9em
+  p
+    padding 0 0 1em
+    font-size 1.3em
+  ul
+    list-style disc inside
+    li
+      font-size 1.2em
+      line-height 1.5em
+
+.sv-serviceImage
+  flex-basis 50%
+  img
+    padding 0 2em
+    width 100%
+    height auto
+    object-fit contain
+    box-sizing border-box
+
+.sv-schedule
+  padding 4em 0
+  text-align center
+  h1
+    font-size 2em
+    font-weight 500
+    margin-bottom 0.8em
+  p
+    font-size 1.2em
+    padding-top 0
+    padding-bottom 0.4em
 
 @keyframes fade-in-top
   from
@@ -277,14 +374,3 @@ img[src='/img/boiler-room.jpg']
 
 @import 'partials/navigation'
 @import 'partials/contact'
-
-.gl-wrapper
-  width 100vw
-  margin 0
-  padding 0
-  background linear-gradient(to bottom left, blue_secondary, blue_secondary 30.9%, red_primary 31%)
-  display flex
-  justify-content center
-  img
-    margin 1em auto
-    border 10px solid white
