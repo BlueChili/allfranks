@@ -334,24 +334,36 @@ fullHD = 1919px
 
 .sv-service
   padding 3em 0
+
 .sv-header
-  padding 2.5em 0
+  padding 1em  0 2.5em
   display flex
+  flex-direction column
   margin 0 auto
   align-items center
   justify-content center
   border-bottom 1px solid red_primary
 
 .sv-headerLogo
-  width 280px
+  width 20em
   height auto
   object-fit contain
-  padding-right 3em
+  padding 0
+  margin-bottom 2em
 
 .sv-headerTitle
   text-transform uppercase
   font-weight 700
   color blue_secondary
+
+@media all and (min-width: ipad_portrait)
+  .sv-header
+    flex-direction row
+  padding 2.5em 0
+  .sv-headerLogo
+    width 280px
+    margin 0
+    padding-right 3em
 
 .sv-redBorder
   border-bottom 1px solid red_primary
@@ -363,10 +375,11 @@ fullHD = 1919px
   max-width 960px
   margin 0 auto
   display flex
+  flex-direction column
+
 
 .sv-serviceCopy
-  flex-basis 50%
-  flex-grow 1
+  padding 0 1em 1.5em
   h1
     font-size 2em
     font-weight 500
@@ -381,13 +394,24 @@ fullHD = 1919px
       line-height 1.5em
 
 .sv-serviceImage
-  flex-basis 50%
+  padding-bottom 1em
   img
     padding 0 2em
     width 100%
     height auto
     object-fit contain
     box-sizing border-box
+
+@media all and (min-width: ipad_portrait)
+  .sv-serviceContent
+    flex-direction row
+  .sv-serviceCopy
+    flex-basis 50%
+    flex-grow 1
+    padding 0
+  .sv-serviceImage
+    flex-basis 50%
+    padding 0
 
 .sv-schedule
   padding 4em 0
